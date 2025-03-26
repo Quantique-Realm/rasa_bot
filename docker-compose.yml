@@ -1,0 +1,18 @@
+version: '3'
+services:
+  rasa:
+    image: rasa/rasa:latest
+    ports:
+      - "5005:5005"
+    networks:
+      - rasa_network
+  action_server:
+    image: rasa/rasa-sdk:latest
+    ports:
+      - "5055:5055"
+    networks:
+      - rasa_network
+
+networks:
+  rasa_network:
+    driver: bridge

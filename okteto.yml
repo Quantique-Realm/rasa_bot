@@ -1,0 +1,14 @@
+name: rasa-bot
+services:
+  - name: rasa
+    image: abhi63/rasa_bot:latest
+    build: .
+    command: "rasa run --enable-api --cors '*' --port 5005"
+    ports:
+      - 5005:5005
+  - name: actions
+    image: abhi63/rasa_bot:latest
+    build: .
+    command: "rasa run actions --port 5055"
+    ports:
+      - 5055:5055

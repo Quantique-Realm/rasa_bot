@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: rasa-bot
+    env: docker
+    image: rasa_bot:latest
+    startCommand: docker run -p 5005:5005 rasa_bot:latest
+    envVars:
+      - key: RASA_ENV
+        value: production
+      - key: RASA_MODEL
+        value: /app/models/model
+
+  - type: web
+    name: rasa-action-server
+    env: docker
+    image: rasa_bot:latest
+    startCommand: docker run -p 5055:5055 rasa_bot:latest
+    envVars:
+      - key: ACTION_SERVER_ENV
+        value: production

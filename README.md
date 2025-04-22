@@ -12,7 +12,7 @@ A smart, multi-functional chatbot built using **Rasa** and integrated with a **R
 - 📅 Google Calendar integration for reminders
 - 📍 Location-aware responses (campus map & transport)
 - 🗣️ Voice-to-text input and speech output
-- 🎭 Avatar animations with mouth + hand gestures
+- 🎭 Avatar animations with mouth 
 - 🌐 Multilingual (English + Hindi)
 - 🔐 Secure login (Auth0/Google Auth)
 - 📱 React-based frontend UI
@@ -26,10 +26,9 @@ A smart, multi-functional chatbot built using **Rasa** and integrated with a **R
 | 🧠 Rasa     | NLP & Dialogue Management           |
 | ⚛️ React    | Frontend framework (with Tailwind)  |
 | 🗣️ Web Speech API | Voice input/output          |
-| 🌍 Mapbox   | Campus map and route data           |
-| 📆 Google Calendar API | Reminder integration   |
+| 🌍 OpenStreetMaps   | Campus map and route data           |
 | 🐳 Docker   | Containerized deployment            |
-| ☁️ AWS / DO | Cloud deployment                    |
+
 
 ---
 
@@ -65,6 +64,7 @@ rasa run --enable-api
 rasa run actions
 ```
 ## Folder Structure
+```bash
 📦 rasa_bot
 ├── frontend/                 # React frontend
 ├── data/                     # NLU & stories
@@ -75,6 +75,7 @@ rasa run actions
 ├── credentials.yml           # API credentials
 ├── endpoints.yml             # Rasa server endpoints
 └── README.md                 # You're here!
+```
 
 ### Testing The Bot
 ```bash
